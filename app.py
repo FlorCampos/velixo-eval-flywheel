@@ -45,7 +45,7 @@ with st.sidebar:
     st.caption(
         "Demonstrates how production failures in GIQL payload generation "
         "are captured, evaluated by an Offline Judge, healed automatically, "
-        "and structured into training-ready SFT pairs."
+        "and structured into training-ready Supervised Fine-Tuning (SFT) pairs."
     )
 
 if not api_key:
@@ -63,7 +63,7 @@ class JudgeEvaluation(BaseModel):
     critique: str = Field(description="Detailed explanation of what failed or why it passed")
 
 # 5. User Input Interface
-st.markdown("### 💬 Natural Language Financial Query")
+st.markdown("### 💬 Natural Language Financial Query (Press Run Pipeline button)")
 col_input, col_btn = st.columns([5, 1])
 
 with col_input:
